@@ -1,2 +1,2 @@
 # Jump-Ball
-It's a small game project done by Verilog.
+Note that this project should be programmed into an existing FPGA board.
