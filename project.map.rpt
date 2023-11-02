@@ -1,0 +1,513 @@
+Analysis & Synthesis report for project
+Tue Jun 02 14:10:03 2020
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. Removed Registers Triggering Further Register Optimizations
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |project
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                          ;
++-----------------------------+-----------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Jun 02 14:10:03 2020   ;
+; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
+; Revision Name               ; project                                 ;
+; Top-level Entity Name       ; project                                 ;
+; Family                      ; Cyclone                                 ;
+; Total logic elements        ; 640                                     ;
+; Total pins                  ; 51                                      ;
+; Total virtual pins          ; 0                                       ;
+; Total memory bits           ; 0                                       ;
+; Total PLLs                  ; 0                                       ;
++-----------------------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP1C12Q240C8       ;                    ;
+; Top-level entity name                                          ; project            ; project            ;
+; Family name                                                    ; Cyclone            ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+; project.v                        ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/project/project.v                          ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/lpm_divide.tdf      ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/abs_divider.inc     ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/sign_div_unsign.inc ;
+; aglobal90.inc                    ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/aglobal90.inc       ;
+; db/lpm_divide_etl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/project/db/lpm_divide_etl.tdf              ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/project/db/sign_div_unsign_7kh.tdf         ;
+; db/alt_u_div_une.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/project/db/alt_u_div_une.tdf               ;
+; db/add_sub_3dc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/project/db/add_sub_3dc.tdf                 ;
+; db/add_sub_4dc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/project/db/add_sub_4dc.tdf                 ;
+; db/add_sub_5dc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/project/db/add_sub_5dc.tdf                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Total logic elements                        ; 640      ;
+;     -- Combinational with no register       ; 384      ;
+;     -- Register only                        ; 124      ;
+;     -- Combinational with a register        ; 132      ;
+;                                             ;          ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 269      ;
+;     -- 3 input functions                    ; 84       ;
+;     -- 2 input functions                    ; 131      ;
+;     -- 1 input functions                    ; 26       ;
+;     -- 0 input functions                    ; 6        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 531      ;
+;     -- arithmetic mode                      ; 109      ;
+;     -- qfbk mode                            ; 0        ;
+;     -- register cascade mode                ; 0        ;
+;     -- synchronous clear/load mode          ; 12       ;
+;     -- asynchronous clear/load mode         ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 256      ;
+; Total logic cells in carry chains           ; 122      ;
+; I/O pins                                    ; 51       ;
+; Maximum fan-out node                        ; ball_clk ;
+; Maximum fan-out                             ; 191      ;
+; Total fan-out                               ; 2141     ;
+; Average fan-out                             ; 3.10     ;
++---------------------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                          ;
++----------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                            ; Library Name ;
++----------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |project                               ; 640 (607)   ; 256          ; 0           ; 51   ; 0            ; 384 (351)    ; 124 (124)         ; 132 (132)        ; 122 (102)       ; 0 (0)      ; |project                                                                                                                       ; work         ;
+;    |lpm_divide:Mod0|                   ; 33 (0)      ; 0            ; 0           ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; 20 (0)          ; 0 (0)      ; |project|lpm_divide:Mod0                                                                                                       ; work         ;
+;       |lpm_divide_etl:auto_generated|  ; 33 (0)      ; 0            ; 0           ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; 20 (0)          ; 0 (0)      ; |project|lpm_divide:Mod0|lpm_divide_etl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_7kh:divider| ; 33 (0)      ; 0            ; 0           ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; 20 (0)          ; 0 (0)      ; |project|lpm_divide:Mod0|lpm_divide_etl:auto_generated|sign_div_unsign_7kh:divider                                             ; work         ;
+;             |alt_u_div_une:divider|    ; 33 (13)     ; 0            ; 0           ; 0    ; 0            ; 33 (13)      ; 0 (0)             ; 0 (0)            ; 20 (0)          ; 0 (0)      ; |project|lpm_divide:Mod0|lpm_divide_etl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_une:divider                       ; work         ;
+;                |add_sub_5dc:add_sub_2| ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |project|lpm_divide:Mod0|lpm_divide_etl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_une:divider|add_sub_5dc:add_sub_2 ; work         ;
+;                |add_sub_5dc:add_sub_3| ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |project|lpm_divide:Mod0|lpm_divide_etl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_une:divider|add_sub_5dc:add_sub_3 ; work         ;
+;                |add_sub_5dc:add_sub_4| ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |project|lpm_divide:Mod0|lpm_divide_etl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_une:divider|add_sub_5dc:add_sub_4 ; work         ;
+;                |add_sub_5dc:add_sub_5| ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |project|lpm_divide:Mod0|lpm_divide_etl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_une:divider|add_sub_5dc:add_sub_5 ; work         ;
++----------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; map[31][15]                             ; Stuck at GND due to stuck port data_in ;
+; map[31][14]                             ; Stuck at GND due to stuck port data_in ;
+; map[31][13]                             ; Stuck at GND due to stuck port data_in ;
+; map[31][12]                             ; Stuck at GND due to stuck port data_in ;
+; map[31][11]                             ; Stuck at GND due to stuck port data_in ;
+; map[31][10]                             ; Stuck at GND due to stuck port data_in ;
+; map[31][9]                              ; Stuck at GND due to stuck port data_in ;
+; map[31][8]                              ; Stuck at GND due to stuck port data_in ;
+; map[31][7]                              ; Stuck at GND due to stuck port data_in ;
+; map[31][6]                              ; Stuck at GND due to stuck port data_in ;
+; map[31][5]                              ; Stuck at GND due to stuck port data_in ;
+; map[31][4]                              ; Stuck at GND due to stuck port data_in ;
+; map[30][15]                             ; Stuck at GND due to stuck port data_in ;
+; map[30][14]                             ; Stuck at GND due to stuck port data_in ;
+; map[30][13]                             ; Stuck at GND due to stuck port data_in ;
+; map[30][12]                             ; Stuck at GND due to stuck port data_in ;
+; map[30][11]                             ; Stuck at GND due to stuck port data_in ;
+; map[30][10]                             ; Stuck at GND due to stuck port data_in ;
+; map[30][9]                              ; Stuck at GND due to stuck port data_in ;
+; map[30][8]                              ; Stuck at GND due to stuck port data_in ;
+; map[30][7]                              ; Stuck at GND due to stuck port data_in ;
+; map[30][6]                              ; Stuck at GND due to stuck port data_in ;
+; map[30][5]                              ; Stuck at GND due to stuck port data_in ;
+; map[30][4]                              ; Stuck at GND due to stuck port data_in ;
+; map[29][15]                             ; Stuck at GND due to stuck port data_in ;
+; map[29][14]                             ; Stuck at GND due to stuck port data_in ;
+; map[29][13]                             ; Stuck at GND due to stuck port data_in ;
+; map[29][12]                             ; Stuck at GND due to stuck port data_in ;
+; map[29][11]                             ; Stuck at GND due to stuck port data_in ;
+; map[29][10]                             ; Stuck at GND due to stuck port data_in ;
+; map[29][9]                              ; Stuck at GND due to stuck port data_in ;
+; map[29][8]                              ; Stuck at GND due to stuck port data_in ;
+; map[29][7]                              ; Stuck at GND due to stuck port data_in ;
+; map[29][6]                              ; Stuck at GND due to stuck port data_in ;
+; map[29][5]                              ; Stuck at GND due to stuck port data_in ;
+; map[29][4]                              ; Stuck at GND due to stuck port data_in ;
+; map[28][15]                             ; Stuck at GND due to stuck port data_in ;
+; map[28][14]                             ; Stuck at GND due to stuck port data_in ;
+; map[28][13]                             ; Stuck at GND due to stuck port data_in ;
+; map[28][12]                             ; Stuck at GND due to stuck port data_in ;
+; map[28][11]                             ; Stuck at GND due to stuck port data_in ;
+; map[28][10]                             ; Stuck at GND due to stuck port data_in ;
+; map[28][9]                              ; Stuck at GND due to stuck port data_in ;
+; map[28][8]                              ; Stuck at GND due to stuck port data_in ;
+; map[28][7]                              ; Stuck at GND due to stuck port data_in ;
+; map[28][6]                              ; Stuck at GND due to stuck port data_in ;
+; map[28][5]                              ; Stuck at GND due to stuck port data_in ;
+; map[28][4]                              ; Stuck at GND due to stuck port data_in ;
+; map[27][15]                             ; Stuck at GND due to stuck port data_in ;
+; map[27][14]                             ; Stuck at GND due to stuck port data_in ;
+; map[27][13]                             ; Stuck at GND due to stuck port data_in ;
+; map[27][12]                             ; Stuck at GND due to stuck port data_in ;
+; map[27][11]                             ; Stuck at GND due to stuck port data_in ;
+; map[27][10]                             ; Stuck at GND due to stuck port data_in ;
+; map[27][9]                              ; Stuck at GND due to stuck port data_in ;
+; map[27][8]                              ; Stuck at GND due to stuck port data_in ;
+; map[27][7]                              ; Stuck at GND due to stuck port data_in ;
+; map[27][6]                              ; Stuck at GND due to stuck port data_in ;
+; map[27][5]                              ; Stuck at GND due to stuck port data_in ;
+; map[27][4]                              ; Stuck at GND due to stuck port data_in ;
+; map[26][15]                             ; Stuck at GND due to stuck port data_in ;
+; map[26][14]                             ; Stuck at GND due to stuck port data_in ;
+; map[26][13]                             ; Stuck at GND due to stuck port data_in ;
+; map[26][12]                             ; Stuck at GND due to stuck port data_in ;
+; map[26][11]                             ; Stuck at GND due to stuck port data_in ;
+; map[26][10]                             ; Stuck at GND due to stuck port data_in ;
+; map[26][9]                              ; Stuck at GND due to stuck port data_in ;
+; map[26][8]                              ; Stuck at GND due to stuck port data_in ;
+; map[26][7]                              ; Stuck at GND due to stuck port data_in ;
+; map[26][6]                              ; Stuck at GND due to stuck port data_in ;
+; map[26][5]                              ; Stuck at GND due to stuck port data_in ;
+; map[26][4]                              ; Stuck at GND due to stuck port data_in ;
+; map[25][15]                             ; Stuck at GND due to stuck port data_in ;
+; map[25][14]                             ; Stuck at GND due to stuck port data_in ;
+; map[25][13]                             ; Stuck at GND due to stuck port data_in ;
+; map[25][12]                             ; Stuck at GND due to stuck port data_in ;
+; map[25][11]                             ; Stuck at GND due to stuck port data_in ;
+; map[25][10]                             ; Stuck at GND due to stuck port data_in ;
+; map[25][9]                              ; Stuck at GND due to stuck port data_in ;
+; map[25][8]                              ; Stuck at GND due to stuck port data_in ;
+; map[25][7]                              ; Stuck at GND due to stuck port data_in ;
+; map[25][6]                              ; Stuck at GND due to stuck port data_in ;
+; map[25][5]                              ; Stuck at GND due to stuck port data_in ;
+; map[25][4]                              ; Stuck at GND due to stuck port data_in ;
+; map[24][15]                             ; Stuck at GND due to stuck port data_in ;
+; map[24][14]                             ; Stuck at GND due to stuck port data_in ;
+; map[24][13]                             ; Stuck at GND due to stuck port data_in ;
+; map[24][12]                             ; Stuck at GND due to stuck port data_in ;
+; map[24][11]                             ; Stuck at GND due to stuck port data_in ;
+; map[24][10]                             ; Stuck at GND due to stuck port data_in ;
+; map[24][9]                              ; Stuck at GND due to stuck port data_in ;
+; map[24][8]                              ; Stuck at GND due to stuck port data_in ;
+; map[24][7]                              ; Stuck at GND due to stuck port data_in ;
+; map[24][6]                              ; Stuck at GND due to stuck port data_in ;
+; map[24][5]                              ; Stuck at GND due to stuck port data_in ;
+; map[24][4]                              ; Stuck at GND due to stuck port data_in ;
+; map[23][15]                             ; Stuck at GND due to stuck port data_in ;
+; map[23][14]                             ; Stuck at GND due to stuck port data_in ;
+; map[23][13]                             ; Stuck at GND due to stuck port data_in ;
+; map[23][12]                             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 396 ;                                        ;
++-----------------------------------------+----------------------------------------+
+* Table truncated at 100 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                 ;
++---------------+---------------------------+-------------------------------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                                          ;
++---------------+---------------------------+-------------------------------------------------------------------------------------------------+
+; map[31][15]   ; Stuck at GND              ; map[30][15], map[29][15], map[28][15], map[27][15], map[26][15], map[25][15], map[24][15],      ;
+;               ; due to stuck port data_in ; map[23][15], map[22][15], map[21][15], map[20][15], map[19][15], map[18][15], map[17][15],      ;
+;               ;                           ; map[16][15], map[15][15], map[14][15], map[13][15], map[12][15], map[11][15], map[10][15],      ;
+;               ;                           ; map[9][15], map[8][15], map[7][15], map[6][15], map[5][15], map[4][15], map[3][15], map[2][15], ;
+;               ;                           ; map[1][15], map[0][15]                                                                          ;
+; map[31][13]   ; Stuck at GND              ; map[30][13], map[29][13], map[28][13], map[27][13], map[26][13], map[25][13], map[24][13],      ;
+;               ; due to stuck port data_in ; map[23][13], map[22][13], map[21][13], map[20][13], map[19][13], map[18][13], map[17][13],      ;
+;               ;                           ; map[16][13], map[15][13], map[14][13], map[13][13], map[12][13], map[11][13], map[10][13],      ;
+;               ;                           ; map[9][13], map[8][13], map[7][13], map[6][13], map[5][13], map[4][13], map[3][13], map[2][13], ;
+;               ;                           ; map[1][13], map[0][13]                                                                          ;
+; map[31][11]   ; Stuck at GND              ; map[30][11], map[29][11], map[28][11], map[27][11], map[26][11], map[25][11], map[24][11],      ;
+;               ; due to stuck port data_in ; map[23][11], map[22][11], map[21][11], map[20][11], map[19][11], map[18][11], map[17][11],      ;
+;               ;                           ; map[16][11], map[15][11], map[14][11], map[13][11], map[12][11], map[11][11], map[10][11],      ;
+;               ;                           ; map[9][11], map[8][11], map[7][11], map[6][11], map[5][11], map[4][11], map[3][11], map[2][11], ;
+;               ;                           ; map[1][11], map[0][11]                                                                          ;
+; map[31][14]   ; Stuck at GND              ; map[30][14], map[29][14], map[28][14], map[27][14], map[26][14], map[25][14], map[24][14],      ;
+;               ; due to stuck port data_in ; map[23][14], map[22][14], map[21][14], map[20][14], map[19][14], map[18][14], map[17][14],      ;
+;               ;                           ; map[16][14], map[15][14], map[14][14], map[13][14], map[12][14], map[11][14], map[10][14],      ;
+;               ;                           ; map[9][14], map[8][14], map[7][14], map[6][14], map[5][14], map[4][14]                          ;
+; map[31][12]   ; Stuck at GND              ; map[30][12], map[29][12], map[28][12], map[27][12], map[26][12], map[25][12], map[24][12],      ;
+;               ; due to stuck port data_in ; map[23][12], map[22][12], map[21][12], map[20][12], map[19][12], map[18][12], map[17][12],      ;
+;               ;                           ; map[16][12], map[15][12], map[14][12], map[13][12], map[12][12], map[11][12], map[10][12],      ;
+;               ;                           ; map[9][12], map[8][12], map[7][12], map[6][12], map[5][12], map[4][12]                          ;
+; map[31][10]   ; Stuck at GND              ; map[30][10], map[29][10], map[28][10], map[27][10], map[26][10], map[25][10], map[24][10],      ;
+;               ; due to stuck port data_in ; map[23][10], map[22][10], map[21][10], map[20][10], map[19][10], map[18][10], map[17][10],      ;
+;               ;                           ; map[16][10], map[15][10], map[14][10], map[13][10], map[12][10], map[11][10], map[10][10],      ;
+;               ;                           ; map[9][10], map[8][10], map[7][10], map[6][10], map[5][10]                                      ;
+; map[31][9]    ; Stuck at GND              ; map[30][9], map[29][9], map[28][9], map[27][9], map[26][9], map[25][9], map[24][9], map[23][9], ;
+;               ; due to stuck port data_in ; map[22][9], map[21][9], map[20][9], map[19][9], map[18][9], map[17][9], map[16][9], map[15][9], ;
+;               ;                           ; map[14][9], map[13][9], map[12][9], map[11][9], map[10][9], map[9][9], map[8][9], map[7][9],    ;
+;               ;                           ; map[6][9]                                                                                       ;
+; map[31][8]    ; Stuck at GND              ; map[30][8], map[29][8], map[28][8], map[27][8], map[26][8], map[25][8], map[24][8], map[23][8], ;
+;               ; due to stuck port data_in ; map[22][8], map[21][8], map[20][8], map[19][8], map[18][8], map[17][8], map[16][8], map[15][8], ;
+;               ;                           ; map[14][8], map[13][8], map[12][8], map[11][8], map[10][8], map[9][8], map[8][8], map[7][8],    ;
+;               ;                           ; map[6][8]                                                                                       ;
+; map[31][7]    ; Stuck at GND              ; map[30][7], map[29][7], map[28][7], map[27][7], map[26][7], map[25][7], map[24][7], map[23][7], ;
+;               ; due to stuck port data_in ; map[22][7], map[21][7], map[20][7], map[19][7], map[18][7], map[17][7], map[16][7], map[15][7], ;
+;               ;                           ; map[14][7], map[13][7], map[12][7], map[11][7], map[10][7], map[9][7], map[8][7], map[7][7],    ;
+;               ;                           ; map[6][7]                                                                                       ;
+; map[31][6]    ; Stuck at GND              ; map[30][6], map[29][6], map[28][6], map[27][6], map[26][6], map[25][6], map[24][6], map[23][6], ;
+;               ; due to stuck port data_in ; map[22][6], map[21][6], map[20][6], map[19][6], map[18][6], map[17][6], map[16][6], map[15][6], ;
+;               ;                           ; map[14][6], map[13][6], map[12][6], map[11][6], map[10][6], map[9][6], map[8][6], map[7][6],    ;
+;               ;                           ; map[6][6]                                                                                       ;
+; map[31][5]    ; Stuck at GND              ; map[30][5], map[29][5], map[28][5], map[27][5], map[26][5], map[25][5], map[24][5], map[23][5], ;
+;               ; due to stuck port data_in ; map[22][5], map[21][5], map[20][5], map[19][5], map[18][5], map[17][5], map[16][5], map[15][5], ;
+;               ;                           ; map[14][5], map[13][5], map[12][5], map[11][5], map[10][5], map[9][5], map[8][5], map[7][5],    ;
+;               ;                           ; map[6][5]                                                                                       ;
+; map[31][4]    ; Stuck at GND              ; map[30][4], map[29][4], map[28][4], map[27][4], map[26][4], map[25][4], map[24][4], map[23][4], ;
+;               ; due to stuck port data_in ; map[22][4], map[21][4], map[20][4], map[19][4], map[18][4], map[17][4], map[16][4], map[15][4], ;
+;               ;                           ; map[14][4], map[13][4], map[12][4], map[11][4], map[10][4], map[9][4], map[8][4], map[7][4],    ;
+;               ;                           ; map[6][4]                                                                                       ;
+; map[3][12]    ; Stuck at GND              ; map[2][12]                                                                                      ;
+;               ; due to stuck port data_in ;                                                                                                 ;
+; map[1][12]    ; Stuck at GND              ; map[0][12]                                                                                      ;
+;               ; due to stuck port data_in ;                                                                                                 ;
+; map[3][14]    ; Stuck at GND              ; map[2][14]                                                                                      ;
+;               ; due to stuck port data_in ;                                                                                                 ;
+; map[1][14]    ; Stuck at GND              ; map[0][14]                                                                                      ;
+;               ; due to stuck port data_in ;                                                                                                 ;
++---------------+---------------------------+-------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 256   ;
+; Number of registers using Synchronous Clear  ; 12    ;
+; Number of registers using Synchronous Load   ; 12    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 61    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; com[0]~reg0                            ; 3       ;
+; jump_en                                ; 3       ;
+; speed[4]                               ; 2       ;
+; speed[1]                               ; 3       ;
+; speed[5]                               ; 2       ;
+; Total number of inverted registers = 5 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |project|map[2][1]         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |project|map[2][2]         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |project|map[5][3]         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |project|map[5][0]         ;
+; 32:1               ; 12 bits   ; 252 LEs       ; 48 LEs               ; 204 LEs                ; Yes        ; |project|column[10]~reg0   ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |project|column[15]~reg0   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |project|Mux27             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |project|Mux2              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |project|Mux4              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |project|Mux3              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |project|Mux5              ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |project|ball_place~8      ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |project|Mux25             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |project ;
++----------------+----------+---------------------------------------------+
+; Parameter Name ; Value    ; Type                                        ;
++----------------+----------+---------------------------------------------+
+; zero           ; 11111100 ; Unsigned Binary                             ;
++----------------+----------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                ;
+; LPM_WIDTHD             ; 2              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_etl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Tue Jun 02 14:10:00 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project -c project
+Info: Found 1 design units, including 1 entities, in source file project.v
+    Info: Found entity 1: project
+Info: Elaborating entity "project" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at project.v(37): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at project.v(71): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at project.v(75): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at project.v(94): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at project.v(137): truncated value with size 32 to match size of target (5)
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
+Info: Elaborated megafunction instantiation "lpm_divide:Mod0"
+Info: Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "6"
+    Info: Parameter "LPM_WIDTHD" = "2"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_etl.tdf
+    Info: Found entity 1: lpm_divide_etl
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
+    Info: Found entity 1: sign_div_unsign_7kh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_une.tdf
+    Info: Found entity 1: alt_u_div_une
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_3dc.tdf
+    Info: Found entity 1: add_sub_3dc
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_4dc.tdf
+    Info: Found entity 1: add_sub_4dc
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_5dc.tdf
+    Info: Found entity 1: add_sub_5dc
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rst"
+Info: Implemented 691 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 48 output pins
+    Info: Implemented 640 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 236 megabytes
+    Info: Processing ended: Tue Jun 02 14:10:03 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

@@ -1,0 +1,454 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+41
+2988
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+lpm_divide
+# storage
+db|project.(1).cnf
+db|project.(1).cnf
+# case_insensitive
+# source_file
+..|..|..|..|altera|90|quartus|libraries|megafunctions|lpm_divide.tdf
+bab4b3ca888e5f792f433438428ff446
+7
+# user_parameter {
+LPM_WIDTHN
+6
+PARAMETER_UNKNOWN
+USR
+LPM_WIDTHD
+2
+PARAMETER_UNKNOWN
+USR
+LPM_NREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_DREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_REMAINDERPOSITIVE
+TRUE
+PARAMETER_UNKNOWN
+DEF
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+lpm_divide_etl
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+OPTIMIZE_FOR_SPEED
+5
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+remain1
+-1
+3
+remain0
+-1
+3
+numer5
+-1
+3
+numer4
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom1
+-1
+2
+denom0
+-1
+2
+}
+# include_file {
+..|..|..|..|altera|90|quartus|libraries|megafunctions|abs_divider.inc
+cdfefd53e136b3a8e541899b82db37d
+..|..|..|..|altera|90|quartus|libraries|megafunctions|sign_div_unsign.inc
+c1e17922387cb5d0c88d7fb673544bb4
+..|..|..|..|altera|90|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide_etl
+# storage
+db|project.(2).cnf
+db|project.(2).cnf
+# case_insensitive
+# source_file
+db|lpm_divide_etl.tdf
+c7a7f75b8a7f9881fe79fb67ea8571
+7
+# used_port {
+remain1
+-1
+3
+remain0
+-1
+3
+numer5
+-1
+3
+numer4
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom1
+-1
+3
+denom0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+sign_div_unsign_7kh
+# storage
+db|project.(3).cnf
+db|project.(3).cnf
+# case_insensitive
+# source_file
+db|sign_div_unsign_7kh.tdf
+85a7a96b7ff0c01bfec14da1ec83ac
+7
+# used_port {
+remainder1
+-1
+3
+remainder0
+-1
+3
+quotient5
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numerator5
+-1
+3
+numerator4
+-1
+3
+numerator3
+-1
+3
+numerator2
+-1
+3
+numerator1
+-1
+3
+numerator0
+-1
+3
+denominator1
+-1
+3
+denominator0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+alt_u_div_une
+# storage
+db|project.(4).cnf
+db|project.(4).cnf
+# case_insensitive
+# source_file
+db|alt_u_div_une.tdf
+e9d49fcac4f0793a92e77860802b5a3a
+7
+# used_port {
+remainder1
+-1
+3
+remainder0
+-1
+3
+quotient5
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numerator5
+-1
+3
+numerator4
+-1
+3
+numerator3
+-1
+3
+numerator2
+-1
+3
+numerator1
+-1
+3
+numerator0
+-1
+3
+denominator1
+-1
+3
+denominator0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_3dc
+# storage
+db|project.(5).cnf
+db|project.(5).cnf
+# case_insensitive
+# source_file
+db|add_sub_3dc.tdf
+d992aad31e3fee94c597f1601b94eca6
+7
+# used_port {
+result0
+-1
+3
+datab0
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_4dc
+# storage
+db|project.(6).cnf
+db|project.(6).cnf
+# case_insensitive
+# source_file
+db|add_sub_4dc.tdf
+42f04076a73553be29ab13e06e2e5089
+7
+# used_port {
+result1
+-1
+3
+result0
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_5dc
+# storage
+db|project.(7).cnf
+db|project.(7).cnf
+# case_insensitive
+# source_file
+db|add_sub_5dc.tdf
+d525a2b4e0a516d3cea48a59412759c9
+7
+# used_port {
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+project
+# storage
+db|project.(0).cnf
+db|project.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+project.v
+7c836d7e08b34c91f74e7218749f49
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+zero
+11111100
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+
